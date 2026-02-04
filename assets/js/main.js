@@ -20,3 +20,12 @@ function sendWhatsApp() {
 
   window.open(whatsappURL, "_blank");
 }
+
+function setLang(lang) {
+  const elements = document.querySelectorAll("[data-en]");
+
+  elements.forEach(el => {
+    el.textContent = el.getAttribute(`data-${lang}`);
+  });
+}
+

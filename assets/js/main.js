@@ -7,13 +7,14 @@ function sendWhatsApp() {
   const phone = document.getElementById("phone").value;
 
   const message =
-    `Business Transport Quote Request:%0A%0A` +
-    `Company: ${company}%0A` +
-    `Cargo: ${cargo}%0A` +
-    `Pickup: ${pickup}%0A` +
-    `Delivery: ${delivery}%0A` +
-    `Load: ${weight}%0A` +
-    `Contact: ${phone}`;
+  `Transport Quote Request - Business Use%0A%0A` +
+  `Company: ${company}%0A` +
+  `Cargo Type: ${cargo}%0A` +
+  `Pickup Location: ${pickup}%0A` +
+  `Delivery Location: ${delivery}%0A` +
+  `Load / Container: ${weight}%0A` +
+  `Contact Number: ${phone}`;
+
 
   const whatsappURL = `https://wa.me/8801733818617?text=${message}`;
 

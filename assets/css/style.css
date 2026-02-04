@@ -143,3 +143,31 @@ iframe {
   background: #020617;
   font-size: 14px;
 }
+
+/* sticky mobile action bar */
+.mobile-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #020617;
+    border-top: 1px solid #1e293b;
+    z-index: 999;
+  }
+
+  .mobile-bar a {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    color: #facc15;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+

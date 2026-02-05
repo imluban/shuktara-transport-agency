@@ -4,28 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Shuktara Transport Agency</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-<header>
-  <h1>Our Transport Services</h1>
+<header class="header">
+  <img src="assets/images/logo.png" class="logo" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="fleet.html">Fleet</a>
+    <a href="coverage.html">Coverage</a>
+    <a href="quote.html">Get a Quote</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="lang-toggle">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('bn')">বাংলা</button>
+  </div>
 </header>
 
-<section>
-  <h3>Container Transport</h3>
-  <p>20ft & 40ft container movement from Chattogram Port to factories and warehouses nationwide.</p>
+<section class="section">
+  <h1
+    data-en="Our Transport Services"
+    data-bn="আমাদের পরিবহন সেবা">
+    Our Transport Services
+  </h1>
 
-  <h3>Oil & Liquid Tanker Service</h3>
-  <p>Licensed oil and liquid tanker transportation with full insurance coverage.</p>
+  <div class="cards">
+    <div class="card">
+      <h3 data-en="Container Transport" data-bn="কনটেইনার পরিবহন">Container Transport</h3>
+      <p data-en="20ft & 40ft container movement nationwide."
+         data-bn="সারা বাংলাদেশে ২০ ও ৪০ ফুট কনটেইনার পরিবহন।">
+        20ft & 40ft container movement nationwide.
+      </p>
+    </div>
 
-  <h3>Heavy Industrial Cargo</h3>
-  <p>Machinery, generators, steel structures, and oversized cargo.</p>
+    <div class="card">
+      <h3 data-en="Oil & Fuel Tankers" data-bn="অয়েল ও ফুয়েল ট্যাংকার">Oil & Fuel Tankers</h3>
+      <p data-en="Licensed tanker operations with full insurance."
+         data-bn="লাইসেন্সপ্রাপ্ত ও সম্পূর্ণ বীমাকৃত ট্যাংকার সার্ভিস।">
+        Licensed tanker operations with full insurance.
+      </p>
+    </div>
 
-  <h3>Nationwide Coverage</h3>
-  <p>Operating across all divisions of Bangladesh with dedicated routes.</p>
+    <div class="card">
+      <h3 data-en="Heavy Industrial Cargo" data-bn="ভারী শিল্প কার্গো">Heavy Industrial Cargo</h3>
+      <p data-en="Machinery, bulk goods, and raw materials."
+         data-bn="মেশিনারি, কাঁচামাল ও বাল্ক কার্গো পরিবহন।">
+        Machinery, bulk goods, and raw materials.
+      </p>
+    </div>
+  </div>
 </section>
 
-<script src="main.js"></script>
+<footer class="footer">
+  <p>© M/S Shuktara Transport Agency</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

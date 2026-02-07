@@ -18,20 +18,25 @@
     <a href="quote.html">Get a Quote</a>
     <a href="contact.html">Contact</a>
   </nav>
+  <div class="lang-toggle">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('bn')">বাংলা</button>
+  </div>
 </header>
 
 <section class="section dark">
   <h1 data-en="Request a Business Quote" data-bn="ব্যবসায়িক কোট অনুরোধ করুন">
     Request a Business Quote
   </h1>
-
-  <p
-    data-en="Call or WhatsApp us with cargo details for fast pricing."
-    data-bn="দ্রুত কোটের জন্য কার্গোর তথ্য দিয়ে কল বা হোয়াটসঅ্যাপ করুন।">
-    Call or WhatsApp us with cargo details for fast pricing.
-  </p>
-
-  <a href="https://wa.me/8801733818617" class="btn primary">WhatsApp Now</a>
+  <form class="quote-form" onsubmit="sendWhatsApp(); return false;">
+    <input id="company" placeholder="Company Name" required />
+    <input id="cargo" placeholder="Cargo Type" required />
+    <input id="pickup" placeholder="Pickup Location" required />
+    <input id="delivery" placeholder="Delivery Location" required />
+    <input id="weight" placeholder="Load / Container Size" required />
+    <input id="phone" placeholder="Contact Number" required />
+    <button class="btn primary">Send via WhatsApp</button>
+  </form>
 </section>
 
 <footer class="footer">

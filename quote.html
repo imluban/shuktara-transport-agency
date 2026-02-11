@@ -9,13 +9,13 @@
 <body>
 
 <header class="header">
-  <img src="assets/images/logo.png" class="logo" />
+  <img src="assets/images/logo.png" class="logo" alt="Shuktara Logo" />
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="fleet.html">Fleet</a>
     <a href="coverage.html">Coverage</a>
-    <a href="quote.html">Get a Quote</a>
+    <a href="quote.html" class="active">Get a Quote</a>
     <a href="contact.html">Contact</a>
   </nav>
   <div class="lang-toggle">
@@ -24,19 +24,40 @@
   </div>
 </header>
 
-<section class="section dark">
-  <h1 data-en="Request a Business Quote" data-bn="ব্যবসায়িক কোট অনুরোধ করুন">
-    Request a Business Quote
-  </h1>
-  <form class="quote-form" onsubmit="sendWhatsApp(); return false;">
-    <input id="company" placeholder="Company Name" required />
-    <input id="cargo" placeholder="Cargo Type" required />
-    <input id="pickup" placeholder="Pickup Location" required />
-    <input id="delivery" placeholder="Delivery Location" required />
-    <input id="weight" placeholder="Load / Container Size" required />
-    <input id="phone" placeholder="Contact Number" required />
-    <button class="btn primary">Send via WhatsApp</button>
-  </form>
+<section class="quote-section">
+
+  <div class="quote-container">
+
+    <!-- Left Image -->
+    <div class="quote-image">
+      <img src="assets/images/fleet-heavy.jpg" alt="Heavy Transport Fleet">
+    </div>
+
+    <!-- Right Form -->
+    <div class="quote-content">
+      <h1 data-en="Request a Business Quote" data-bn="ব্যবসায়িক কোট অনুরোধ করুন">
+        Request a Business Quote
+      </h1>
+
+      <p class="quote-subtitle"
+         data-en="Professional container & tanker logistics across Bangladesh."
+         data-bn="সারা বাংলাদেশে পেশাদার কন্টেইনার ও ট্যাংকার লজিস্টিকস।">
+         Professional container & tanker logistics across Bangladesh.
+      </p>
+
+      <form class="quote-form" onsubmit="sendWhatsApp(); return false;">
+        <input id="company" placeholder="Company Name" required />
+        <input id="cargo" placeholder="Cargo Type" required />
+        <input id="pickup" placeholder="Pickup Location" required />
+        <input id="delivery" placeholder="Delivery Location" required />
+        <input id="weight" placeholder="Load / Container Size" required />
+        <input id="phone" placeholder="Contact Number" required />
+        <button type="submit" class="btn primary">Send via WhatsApp</button>
+      </form>
+    </div>
+
+  </div>
+
 </section>
 
 <footer class="footer">

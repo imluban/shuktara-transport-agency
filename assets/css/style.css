@@ -77,11 +77,12 @@ nav a.active {
    HERO
 ================================ */
 .hero {
-  padding: 100px 20px 80px;
-  text-align: center;
-  background:
-    linear-gradient(rgba(15,17,21,0.85), rgba(15,17,21,0.95)),
-    url("../images/hero.jpg") center / cover no-repeat;
+  background: url('../images/hero-truck.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .hero h1 {
@@ -96,6 +97,14 @@ nav a.active {
   color: var(--text-muted);
   font-size: 1.05rem;
 }
+
+.coverage-hero {
+  background: url('../images/coverage-bg.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+}
+
 
 /* ===============================
    BUTTONS

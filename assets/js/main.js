@@ -61,3 +61,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("site_lang") || "en";
   setLang(savedLang);
 });
+
+/*Loader + Scroll Animation JS*/
+
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+  if(loader){
+    loader.style.opacity = "0";
+    setTimeout(() => loader.remove(), 500);
+  }
+});
+
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    if(elementTop < windowHeight - 100){
+      el.classList.add("active");
+    }
+  });
+});

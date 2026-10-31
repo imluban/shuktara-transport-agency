@@ -1,0 +1,1 @@
+Generated placeholder artwork lives here as <name>.svg: hero, road, marine, port, industrial, warehouse. Add <name>.jpg (licensed, ~2400px wide) to replace any of them. Label representative imagery honestly; do not present stock photos as company-owned vehicles.

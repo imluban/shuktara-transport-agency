@@ -1,0 +1,45 @@
+// [slug, title_en, title_bn, desc_en, desc_bn]
+export type Item = [string, string, string, string, string];
+type Loc = { h: string; intro: string; note?: string };
+export const NAV: [string, string, string][] = [
+  ["about","About","পরিচিতি"],["services","Services","সেবা"],["fleet","Fleet","ফ্লিট"],["network","Network","নেটওয়ার্ক"],["industries","Industries","শিল্পখাত"],
+  ["safety","Safety","নিরাপত্তা"],["tracking","Tracking","ট্র্যাকিং"],["contact","Contact","যোগাযোগ"]];
+const confirm = { en: "Service availability is subject to company confirmation.", bn: "সেবার প্রাপ্যতা কোম্পানির নিশ্চিতকরণ সাপেক্ষে।" };
+export const pages: Record<string, { en: Loc; bn: Loc; items: Item[]; link?: boolean }> = {
+  about: { en: { h: "More Than Transportation. A Commitment to Moving Forward.", intro: "Shuktara Transport Agency is a Bangladeshi transportation and logistics business serving commercial, industrial, petroleum, cargo and maritime requirements. Company-specific facts are to be supplied by the company." },
+    bn: { h: "পরিবহনের চেয়েও বেশি। এগিয়ে চলার অঙ্গীকার।", intro: "শুকতারা ট্রান্সপোর্ট এজেন্সি বাণিজ্যিক, শিল্প, পেট্রোলিয়াম, কার্গো ও নৌ পরিবহনের চাহিদা পূরণকারী একটি বাংলাদেশি পরিবহন ও লজিস্টিকস প্রতিষ্ঠান। কোম্পানি-সংক্রান্ত তথ্য কোম্পানি সরবরাহ করবে।" },
+    items: [["mission","Mission","লক্ষ্য","To move cargo and fuel dependably for Bangladesh's industries.","বাংলাদেশের শিল্পের জন্য নির্ভরযোগ্যভাবে কার্গো ও জ্বালানি পরিবহন করা।"],
+      ["vision","Vision","রূপকল্প","To be a trusted name in Bangladeshi logistics.","বাংলাদেশের লজিস্টিকসে একটি বিশ্বস্ত নাম হওয়া।"],
+      ["reliability","Reliability","নির্ভরযোগ্যতা","Dependable movement, every journey.","প্রতিটি যাত্রায় নির্ভরযোগ্য পরিবহন।"],
+      ["professionalism","Professionalism","পেশাদারিত্ব","Clear communication and disciplined operations.","স্পষ্ট যোগাযোগ ও সুশৃঙ্খল কার্যক্রম।"],
+      ["safety","Safety","নিরাপত্তা","Safe handling of people, cargo and environment.","মানুষ, কার্গো ও পরিবেশের নিরাপদ ব্যবস্থাপনা।"],
+      ["accountability","Accountability & Customer Commitment","জবাবদিহিতা ও গ্রাহক অঙ্গীকার","We own our commitments to customers.","গ্রাহকদের প্রতি অঙ্গীকারের দায় আমরা নিই।"]] },
+  services: { en: { h: "Services", intro: "Transportation and logistics solutions for Bangladesh's industries.", note: confirm.en }, bn: { h: "আমাদের সেবা", intro: "বাংলাদেশের শিল্পের জন্য পরিবহন ও লজিস্টিকস সমাধান।", note: confirm.bn }, link: true,
+    items: [["petroleum","Oil & Petroleum Transportation","তেল ও পেট্রোলিয়াম পরিবহন","Tanker and fuel transportation logistics for industrial and commercial fuel movement.","শিল্প ও বাণিজ্যিক জ্বালানি চলাচলের জন্য ট্যাংকার ও জ্বালানি পরিবহন লজিস্টিকস।"],
+      ["road-freight","Road Freight Transportation","সড়কপথে পণ্য পরিবহন","Heavy-duty truck transportation for commercial cargo, industrial equipment and general goods.","বাণিজ্যিক কার্গো, শিল্প সরঞ্জাম ও সাধারণ পণ্যের ভারী ট্রাক পরিবহন।"],
+      ["marine","Marine Transportation","নৌ পরিবহন","Domestic vessel-based cargo and oil transportation with port-related coordination.","অভ্যন্তরীণ নৌযানভিত্তিক কার্গো ও তেল পরিবহন এবং বন্দর-সংক্রান্ত সমন্বয়।"],
+      ["industrial","Industrial Logistics","শিল্প লজিস্টিকস","Heavy equipment, industrial supply and project cargo movement.","ভারী সরঞ্জাম, শিল্প সরবরাহ ও প্রকল্প কার্গো পরিবহন।"],
+      ["cargo","Cargo & Freight Management","কার্গো ও ফ্রেইট ব্যবস্থাপনা","Transportation planning, freight management and delivery coordination.","পরিবহন পরিকল্পনা, ফ্রেইট ব্যবস্থাপনা ও ডেলিভারি সমন্বয়।"],
+      ["warehousing","Warehousing & Distribution","গুদামজাতকরণ ও বিতরণ","Cargo storage, inventory support and distribution coordination.","কার্গো সংরক্ষণ, ইনভেন্টরি সহায়তা ও বিতরণ সমন্বয়।"]] },
+  fleet: { en: { h: "Our Fleet", intro: "Vehicle and vessel categories relevant to our services.", note: "Representative categories only. No quantities, specifications or ownership are claimed until verified by the company." },
+    bn: { h: "আমাদের ফ্লিট", intro: "আমাদের সেবার সাথে সম্পর্কিত যানবাহন ও নৌযানের ধরন।", note: "এগুলো প্রতিনিধিত্বমূলক ধরন মাত্র। কোম্পানি যাচাই না করা পর্যন্ত সংখ্যা, স্পেসিফিকেশন বা মালিকানার দাবি করা হয় না।" },
+    items: [["road","Petroleum tanker trucks","পেট্রোলিয়াম ট্যাংকার ট্রাক","Road · fuel and liquid cargo.","সড়ক · জ্বালানি ও তরল কার্গো।"],
+      ["road","Heavy-duty cargo trucks","ভারী কার্গো ট্রাক","Road · commercial freight.","সড়ক · বাণিজ্যিক পণ্য।"],
+      ["road","Container trucks","কন্টেইনার ট্রাক","Road · containerised cargo.","সড়ক · কন্টেইনারবাহী কার্গো।"],
+      ["marine","Oil tankers","তেলবাহী ট্যাংকার","Marine · liquid cargo.","নৌ · তরল কার্গো।"],
+      ["marine","Cargo vessels","কার্গো জাহাজ","Marine · bulk and general cargo.","নৌ · বাল্ক ও সাধারণ কার্গো।"]] },
+  industries: { en: { h: "Industries We Serve", intro: "Transportation support across Bangladesh's key sectors." }, bn: { h: "আমরা যে শিল্পখাতে সেবা দিই", intro: "বাংলাদেশের গুরুত্বপূর্ণ খাতে পরিবহন সহায়তা।" },
+    items: [["oil-gas","Oil & Gas","তেল ও গ্যাস","Fuel and liquid cargo movement.","জ্বালানি ও তরল কার্গো পরিবহন।"],["energy","Energy & Power","জ্বালানি ও বিদ্যুৎ","Equipment and fuel supply transport.","সরঞ্জাম ও জ্বালানি সরবরাহ পরিবহন।"],
+      ["manufacturing","Manufacturing","উৎপাদন","Raw material and finished goods transport.","কাঁচামাল ও তৈরি পণ্য পরিবহন।"],["construction","Construction","নির্মাণ","Heavy equipment and materials movement.","ভারী সরঞ্জাম ও নির্মাণসামগ্রী পরিবহন।"],
+      ["maritime","Maritime","নৌ খাত","Port-related cargo coordination.","বন্দর-সংক্রান্ত কার্গো সমন্বয়।"],["industrial","Industrial Production","শিল্প উৎপাদন","Industrial supply transportation.","শিল্প সরবরাহ পরিবহন।"],
+      ["commercial","Commercial Distribution","বাণিজ্যিক বিতরণ","Domestic distribution coordination.","অভ্যন্তরীণ বিতরণ সমন্বয়।"]] },
+  safety: { en: { h: "Responsible Operations. A Sustainable Future.", intro: "Our approach to safety and sustainability. No certifications or environmental achievements are claimed until documented." },
+    bn: { h: "দায়িত্বশীল কার্যক্রম। টেকসই ভবিষ্যৎ।", intro: "নিরাপত্তা ও টেকসই উন্নয়নে আমাদের দৃষ্টিভঙ্গি। প্রমাণ ছাড়া কোনো সনদ বা পরিবেশগত অর্জনের দাবি করা হয় না।" },
+    items: [["s1","Transportation safety","পরিবহন নিরাপত্তা","Safe driving and vessel practices.","নিরাপদ চালনা ও নৌযান পরিচালনা।"],["s2","Responsible petroleum handling","দায়িত্বশীল পেট্রোলিয়াম হ্যান্ডলিং","Careful handling of fuel cargo.","জ্বালানি কার্গোর সতর্ক হ্যান্ডলিং।"],
+      ["s3","Operational risk awareness","ঝুঁকি সচেতনতা","Identify and manage operational risk.","কার্যক্রমগত ঝুঁকি চিহ্নিত ও ব্যবস্থাপনা।"],["s4","Environmental responsibility","পরিবেশগত দায়িত্ব","Minimise environmental impact.","পরিবেশগত প্রভাব কমানো।"],
+      ["s5","Efficient logistics","দক্ষ লজিস্টিকস","Planning that reduces waste.","অপচয় কমানো পরিকল্পনা।"],["s6","Responsible resource management","দায়িত্বশীল সম্পদ ব্যবস্থাপনা","Use resources thoughtfully.","সম্পদের বিবেচনাপূর্ণ ব্যবহার।"]] },
+  privacy: { en: { h: "Privacy Policy", intro: "[Draft placeholder — must be reviewed by a qualified legal professional before publication.] We collect only the information you submit in quote and contact forms, to respond to your enquiry." },
+    bn: { h: "গোপনীয়তা নীতি", intro: "[খসড়া — প্রকাশের আগে আইন বিশেষজ্ঞ দ্বারা পর্যালোচনা আবশ্যক।] কোটেশন ও যোগাযোগ ফর্মে আপনি যে তথ্য দেন, শুধু তা আপনার অনুরোধের উত্তর দিতে সংগ্রহ করা হয়।" }, items: [] },
+  terms: { en: { h: "Terms & Conditions", intro: "[Draft placeholder — must be reviewed by a qualified legal professional before publication.]" },
+    bn: { h: "শর্তাবলি", intro: "[খসড়া — প্রকাশের আগে আইন বিশেষজ্ঞ দ্বারা পর্যালোচনা আবশ্যক।]" }, items: [] },
+};
